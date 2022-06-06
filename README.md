@@ -47,7 +47,7 @@ yarn run test
 
 ## Stops
 
-![Stops](preview/map.png)
+![Stops](previews/map.png)
 
 ## Details of Stop
-![Details of Stop](preview/stops.png) 
+![Details of Stop](previews/stops.png) 
