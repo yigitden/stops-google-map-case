@@ -6,6 +6,9 @@ import KeyIcon from "@mui/icons-material/Key";
 import { useAppSelector } from "../store";
 import { useState } from "react";
 import { LoginStyle } from "./LoginStyle";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import IconButton from "@mui/material/IconButton";
 
 const Login = ({ setIsLogged }) => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -33,6 +36,11 @@ const Login = ({ setIsLogged }) => {
       }
     }
   };
+  
+  const [showPassword, setShowPassword] = useState(false);
+  const handlePasswordClick = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <Box sx={LoginStyle.main}>
@@ -44,6 +52,7 @@ const Login = ({ setIsLogged }) => {
           sx={LoginStyle.textField}
           id="outlined-basic"
           required
+          fullWidth
           name="email"
           onChange={handleLoginFieldChange}
           label="E-mail"
@@ -63,12 +72,23 @@ const Login = ({ setIsLogged }) => {
           name="password"
           onChange={handleLoginFieldChange}
           label="Password"
-          type="Password"
+          type={showPassword ? "text" : "password"}
           variant="standard"
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
                 <KeyIcon />
+              </InputAdornment>
+            ),
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handlePasswordClick}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
               </InputAdornment>
             ),
           }}
