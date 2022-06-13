@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Map from "../components/Map";
+import Navbar from "../../components/Navbar";
+import Map from "../../components/Map";
 const Stops = ({ setIsLogged }) => {
   return (
     <>

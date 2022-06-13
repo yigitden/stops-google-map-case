@@ -3,7 +3,7 @@ import { Box, Button, TextField, InputAdornment } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import KeyIcon from "@mui/icons-material/Key";
-import { useAppSelector } from "../store";
+import { useAppSelector } from "../../store";
 import { useState } from "react";
 import { LoginStyle } from "./LoginStyle";
 import Visibility from "@mui/icons-material/Visibility";

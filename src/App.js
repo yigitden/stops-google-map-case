@@ -1,5 +1,5 @@
-import Login from "./pages/Login";
-import Stops from "./pages/Stops";
+import Login from "./pages/Login/index";
+import Stops from "./pages/Stops/index";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Loading from "./components/Progress/Loading";
